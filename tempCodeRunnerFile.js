@@ -9,14 +9,14 @@ app.use(cors());
 app.use(express.json());
 
 // 🔑 Gemini API key
-const API_KEY = "AIzaSyAJk3-LE3e70CBVRBFREA5CCal5fIq8Z-I";
+const API_KEY = "Your api key";
 
 // 📧 Email transporter using YOUR Gmail
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: "harshalpatil.2031@gmail.com",
-        pass: "wond moew vkck ifco"
+        user: "your email",
+        pass: "your password"
     }
 });
 
