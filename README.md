@@ -94,13 +94,16 @@ RakshaRide is a **smart safety prototype** that enhances ride security by:
 
 ## 🎥 Demo
 
-(Add your demo video link here)
+https://drive.google.com/drive/folders/19ppXMG5RrDSknVqDIZDaVidjnD32fL1H
 
 ---
 
 ## 📸 Screenshots
 
-(Add screenshots of your UI here)
+<img width="1600" height="636" alt="image" src="https://github.com/user-attachments/assets/4823b0f4-9a44-4919-bbad-fa42e5f4d144" />
+<img width="1600" height="909" alt="image" src="https://github.com/user-attachments/assets/91bde6b2-8463-4afd-90f3-1bcaa032ffd4" />
+
+
 
 ---
 
