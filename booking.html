@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RakshaRide - Smart Women Safety Ride System</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  
+
+    <!-- 🌑 Overlay -->
+    <div class="overlay"></div>
+     
+    <!-- 🚖 Main Booking Card -->
+    <div class="card">
+        <h1 class="brandTitle">🚖 RakshaRide</h1>
+        <h2 class="mainHeading">Booked a Ride? Stay Safe.</h2>
+       
+
+        <input type="text" id="userName" placeholder="Enter your name" /><br><br>
+        <input type="email" id="emergencyemail" placeholder="Emergency email" /><br><br>
+
+         <select id="travelMode">
+            <option value="">Select ride type</option>
+            <option value="cab">Cab</option>
+            <option value="auto">Auto</option>
+            <option value="bike">Bike Taxi</option>
+        </select><br><br>
+
+        <input type="text" id="destination" placeholder="Enter destination (e.g. Pune Station)" /><br><br>  
+
+        <button onclick="startJourney()">Continue to Ride Verification →</button>
+    </div>
+
+    <!-- 💬 Floating Chatbot -->
+    <div id="chatbotIcon" onclick="toggleChat()">🤖</div>
+
+    <div id="chatbox">
+        <div id="chatHeader">🤖 Safety Assistant</div>
+        <div id="chatMessages"></div>
+        <div id="chatInputArea">
+            <input
+                type="text"
+                id="userMessage"
+                placeholder="Ask for safety help..."
+            />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

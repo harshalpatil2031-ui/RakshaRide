@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Journey Tracking</title>
+
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet/dist/leaflet.css"
+    />
+
+    <!-- Leaflet Routing Machine CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css"
+    />
+</head>
+<body class="journeyPage">
+
+  
+    <div class="mapcard centerCard">
+        <h2 class="sectionHeading">🚖 Live Safe Ride Tracking</h2>
+
+        <!-- Driver details -->
+        <p><strong>Driver:</strong> <span id="driverNameText">Raj</span></p>
+        <p><strong>Vehicle:</strong> <span id="vehicleText">MH12AB1234</span></p>
+
+        <!-- Route safety status -->
+        <p id="routeStatus">✅ Route Safe</p>
+
+        <!-- Live map -->
+        <div id="map" class="mapBox" style="height: 500px;"></div>
+        <br>
+
+        <!-- Emergency buttons -->
+        <button class="panicBtn" onclick="panicAlert()">
+            🚨 PANIC ALERT
+        </button>
+
+        <button onclick="endJourney()">
+            ✅ End Journey Safely
+        </button>
+    </div>
+    <div id="chatbotIcon" onclick="toggleChat()">🤖</div>
+
+    <div id="chatbox">
+    <div id="chatHeader">Safety Assistant</div>
+    <div id="chatMessages"></div>
+    <div id="chatInputArea">
+      <input type="text" id="userMessage" placeholder="Ask for safety help..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+    </div>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Leaflet Routing Machine JS -->
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

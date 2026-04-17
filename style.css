@@ -1,0 +1,378 @@
+/* ================= WOMEN SAFETY PREMIUM GRADIENT ================= */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    color: white;
+
+    background: linear-gradient(
+        -45deg,
+        #0beb47,
+        #0bfcb3eb,
+        #0cbeeb,
+        #6c63ff,
+        #f80ce1,
+        #fd04e4
+    );
+    background-size: 400% 400%;
+    animation: womenSafetyFlow 14s ease infinite;
+}
+
+@keyframes womenSafetyFlow {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 100%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 0%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* warm caring glow blobs */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+    opacity: 0.24;
+    pointer-events: none;
+}
+
+body::before {
+    width: 450px;
+    height: 450px;
+    background: rgba(255, 111, 145, 0.28);
+    top: 10%;
+    left: 8%;
+    animation: safetyBlob1 12s ease-in-out infinite alternate;
+}
+
+body::after {
+    width: 400px;
+    height: 400px;
+    background: rgba(108, 99, 255, 0.18);
+    bottom: 10%;
+    right: 8%;
+    animation: safetyBlob2 14s ease-in-out infinite alternate;
+}
+
+@keyframes safetyBlob1 {
+    from { transform: translate(0, 0); }
+    to { transform: translate(60px, 40px); }
+}
+
+@keyframes safetyBlob2 {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-50px, -35px); }
+}
+
+/* ================= PAGE BODY FIX ================= */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.journeyPage {
+    display: block;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+/* ================= MAIN LAYOUT ================= */
+.heroLayout {
+    display: grid;
+    grid-template-columns: 1.3fr 0.9fr;
+    gap: 40px;
+    min-height: 100vh;
+    padding: 50px 60px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.heroLeft h1 {
+    font-size: 64px;
+    margin-bottom: 15px;
+}
+
+.heroLeft h2 {
+    font-size: 34px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.heroText {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 650px;
+}
+
+/* ================= BUTTON ================= */
+.startBtn,
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 18px rgba(255, 75, 43, 0.35);
+}
+
+.startBtn:hover,
+button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 0 24px rgba(255, 75, 43, 0.55);
+}
+
+/* ================= RIGHT CARDS ================= */
+.heroRight {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+/* ================= PREMIUM FROSTED GLASS ================= */
+.featureCard,
+.card,
+.mapcard {
+    background: rgba(99, 102, 241, 0.32);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,0.16);
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.22),
+        0 0 18px rgba(99,102,241,0.14);
+    transition: 0.3s ease;
+}
+
+.featureCard {
+    padding: 18px;
+    min-height: 115px;
+}
+
+.featureCard:hover,
+.card:hover,
+.mapcard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 34px rgba(59,130,246,0.28);
+}
+
+/* ================= HEADINGS ================= */
+.mainHeading,
+.sectionHeading {
+    background: rgba(57, 232, 13, 0.845);
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    text-align: center;
+    font-size: 22px;
+    box-shadow: 0 0 16px rgba(59,130,246,0.25);
+}
+
+/* ================= FORM CARD ================= */
+.card {
+    width: 500px;
+    min-height: 620px;
+    padding: 30px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ================= MAP CARD ================= */
+.mapcard {
+    width: 620px;
+    padding: 20px;
+    margin: 20px auto;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* ================= INPUTS ================= */
+input,
+select {
+    width: 95%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    background: rgba(255,255,255,0.18);
+    color: white !important;
+    caret-color: white;
+    outline: none;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.75);
+}
+
+/* select glass white arrow */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    backdrop-filter: blur(12px);
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' xmlns='http://www.w3.org/2000/svg' width='20' height='20'><path d='M5 7l5 5 5-5'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 40px;
+}
+
+select option {
+    background: #1e3a8a;
+    color: white;
+}
+
+/* ================= PANIC BUTTON ================= */
+.panicBtn {
+    background: linear-gradient(45deg, #ff0000, #ff4d4d);
+}
+
+/* ================= ROUTE STATUS ================= */
+#routeStatus {
+    background: rgba(255, 255, 255, 0.18);
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+/* ================= MAP ================= */
+.mapBox {
+    height: 340px;
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    margin: 14px 0;
+    border: 2px solid rgba(255,255,255,0.18);
+    box-shadow: inset 0 0 16px rgba(0,0,0,0.2);
+    background: #eee;
+}
+
+/* ================= CHATBOT ICON ================= */
+#chatbotIcon,
+.chatbotIcon {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 18px rgba(0,0,0,0.45);
+    z-index: 999;
+    transition: 0.3s;
+}
+
+#chatbotIcon:hover {
+    transform: scale(1.1);
+}
+
+/* ================= CHATBOX ================= */
+#chatbox {
+    position: fixed;
+    right: 20px;
+    bottom: 95px;
+    width: 320px;
+    height: 420px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 18px;
+    display: none;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+    z-index: 999;
+    overflow: hidden;
+}
+
+#chatHeader {
+    background: #3b82f6;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+}
+
+#chatMessages {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.botMsg {
+    background: #eee;
+    padding: 8px;
+    border-radius: 10px;
+    margin: 5px 0;
+    color: black;
+}
+
+.userMsg {
+    background: #3b82f6;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    margin: 5px 0;
+    text-align: right;
+}
+
+#chatInputArea {
+    display: flex;
+    padding: 10px;
+    gap: 8px;
+}
+
+#chatInputArea input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: white !important;
+    color: black !important;
+}
+
+#chatInputArea button {
+    width: auto;
+    padding: 8px 14px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 1100px) {
+    .heroLayout {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 40px 30px;
+    }
+
+    .heroText {
+        margin: auto;
+    }
+
+    .heroRight {
+        grid-template-columns: 1fr;
+    }
+
+    .card,
+    .mapcard {
+        width: 90%;
+    }
+}

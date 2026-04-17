@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Ride</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <div class="card centerCard">
+        <h2 class="sectionHeading">Ride Driver Verification</h2>
+
+        <label>Cab Platform</label>
+        <input type="text" id="bookingPlatform" placeholder="Enter your booking platform (e.g. Uber)">
+        <br><br>
+
+        <label>Driver Name</label>
+        <input type="text" id="driverName" placeholder="Enter driver name from app">
+        <br><br>
+
+        <label>Vehicle Number</label>
+        <input type="text" id="vehicleNumber" placeholder="Enter vehicle number">
+        <br><br>
+
+        <label>Driver OTP</label>
+        <input type="text" id="otp" placeholder="Enter OTP from driver">
+        <br><br>
+
+        <button onclick="verifyRide()">Verify & Start Journey</button>
+    </div>
+      <!-- 💬 Floating Chatbot -->
+    <div id="chatbotIcon" onclick="toggleChat()">🤖</div>
+
+    <div id="chatbox">
+        <div id="chatHeader">🤖 Safety Assistant</div>
+        <div id="chatMessages"></div>
+        <div id="chatInputArea">
+            <input
+                type="text"
+                id="userMessage"
+                placeholder="Ask for safety help..."
+            />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
