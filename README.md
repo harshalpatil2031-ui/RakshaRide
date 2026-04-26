@@ -20,7 +20,7 @@ RakshaRide is a **smart safety prototype** that enhances ride security by:
 *  Detecting route deviation
 *  Sending real-time alerts to emergency contacts
 *  Listening for distress words like *“help”, “danger”*
-* 🤖 Providing AI-based safety assistance
+* Providing AI-based safety assistance
 
 ---
 
